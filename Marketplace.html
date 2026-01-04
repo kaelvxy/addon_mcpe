@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DLC Marketplace</title>
+  <link rel="stylesheet" href="addon.css">
+</head>
+<body onload="cekKoneksi()">
+  <div id="pesan" style="display: none; color: red; text-align: center;">
+    Tidak ada koneksi internet. Silakan periksa jaringan Anda.
+  </div>
+  
+  <div class="container">
+  <div class="card">
+    <h2>Isi Password</h2>
+    <input type="password" placeholder="Masukan Password" id="pw">
+    <p>Minta password ke developer untuk melanjutkan ke halaman addon marketplace melalui whatsapp ( Gratis )</p>
+    <button class="download-btn" onclick="minta()">Minta Password</button>
+    <button class="download-btn" onclick="next()">Lanjut</button>
+  </div>
+  </div>
+  
+<div id="overlay">
+<div id="popup">
+    <h2>Selamat Datang!</h2>
+    <p>Beri Donasi Seikhalsnya</p>
+    <button class="download-btn" onclick="window.location.href='https://saweria.co/Hadzzmc'">Saweria</button>
+    <button class="download-btn" onclick="window.location.href = 'https://sociabuzz.com/hadzz2009/tribe' ">Sociabuzz</button>
+    <br>
+    <button class="download-btn" onclick="tutup()">Close</button>
+    <p id="pw-invalid"></p>
+  </div>
+</div>
+
+  <script>
+    function cekKoneksi() {
+      if (!navigator.onLine) {
+        document.getElementById("pesan").style.display = "block";
+      }
+    }
+
+    window.addEventListener("offline", () => {
+      document.getElementById("pesan").style.display = "block";
+    });
+
+    window.addEventListener("online", () => {
+      document.getElementById("pesan").style.display = "none";
+    });
+    function tutup() {
+    document.getElementById("overlay").style.display = "none";
+  }
+  function minta() {
+    window.location.href = "wa.me/6283891977462"
+  }
+  </script>
+  
+  <div class="bottom-nav">
+    <button class="navbar" onclick="window.location.href = 'https://kaelvxy.github.io/addon_mcpe/Beranda.html'">🏠<br>Beranda</button>
+    <button class="navbar" onclick="window.location.href = 'https://kaelvxy.github.io/addon_mcpe/Free.html'">🚀<br>DLC</button>
+  </div>
+<script>
+  function next() {
+    const pw = ["hadganteng040012"];
+    const input = document.getElementById("pw").value;
+    
+    if(input == pw) {
+     document.body.innerHTML = ``;
+     document.body.innerHTML = `
+  <div class="bottom-nav">
+    <button class="navbar" onclick="window.location.href = 'https://kaelvxy.github.io/addon_mcpe/Beranda.html'">🏠<br>Beranda</button>
+    <button class="navbar" onclick="window.location.href = 'https://kaelvxy.github.io/addon_mcpe/Free.html'">🚀<br>DLC</button>
+  </div>
+      <div class="header">
+    <input type="text" id="search" placeholder="Search" onkeyup="filterCards()"/>
+  </div>
+<br><br>
+  <div class="container" id="addon-list">
+    
+    <div class="card">
+      <h3>Monsters</h3>
+      <img src="image_1(87).jpg" alt="AF"/><a href="https://www.mediafire.com/file/44z1iy7hqsc1dk2/MONSTERS_1.1_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Angels & Demons</h3>
+      <img src="image_1(88).jpg" alt="AF"/><a href="https://www.mediafire.com/file/eg2awysrvyqtg2s/Angels+Demons+Add-On+(addon)byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Hacker Weapons</h3>
+      <img src="image_1(89).jpg" alt="AF"/><a href="https://www.mediafire.com/file/spq3dy6kaqjpstw/Hacker+Weapons+Add-On+(addon)byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Duke PVP</h3>
+      <img src="image_1(70).jpg" alt="AF"/><a href="https://www.mediafire.com/file/f7v7ug9x688xp8d/Duke_PVP_%2528resources%2529byhadzz.mcpack/file" class="download-btn" target="_blank">Download Texture</a>
+    </div>
+    <div class="card">
+      <h3>Soul Darkness</h3>
+      <img src="image_1(71).jpg" alt="AF"/><a href="https://www.mediafire.com/file/2di3y10rw7dv0gr/SOUL_DARKNESS_%2528skin_pack%2529byhadzz.mcpack/file" class="download-btn" target="_blank">Download Skins</a>
+    </div>
+    <div class="card">
+      <h3>Parkour Mechanics</h3>
+      <img src="image_1(72).jpg" alt="AF"/><a href="https://www.mediafire.com/file/99skut5bf3wrsin/Parkour_Mechanics_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Escape The Toy Factory</h3>
+      <img src="image_1(73).jpg" alt="AF"/><a href="https://www.mediafire.com/file/8kczr9xzpqpjwbb/Escape_the_Toy_Factory_%2528world_template%2529byhadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a>
+    </div>
+    <div class="card">
+      <h3>Space Gadgets</h3>
+      <img src="image_1(74).jpg" alt="AF"/><a href="https://www.mediafire.com/file/zdgam1kb987zswt/Space_Gadgets_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Sword Art HD</h3>
+      <img src="image_1(75).jpg" alt="AF"/><a href="https://www.mediafire.com/file/yoqs5pazumyo99q/Sword_Art_HD_%2528skin_pack%2529byhadzz.mcpack/file" class="download-btn" target="_blank">Download Skins</a>
+    </div>
+    <div class="card">
+      <h3>Ancient Anomaly</h3>
+      <img src="image_1(76).jpg" alt="AF"/><a href="https://www.mediafire.com/file/cbnj398zhng001f/Ancient_Anomaly_%2528skin_pack%2529byhadzz.mcpack/file" class="download-btn" target="_blank">Download Skins</a>
+    </div>
+    <div class="card">
+      <h3>Biome Bosses</h3>
+      <img src="image_1(77).jpg" alt="AF"/><a href="https://www.mediafire.com/file/hdxa12pf8mut4bt/Biome_Bosses_%2528world_template%2529byhadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a>
+    </div>
+    <div class="card">
+      <h3>Bruce Lee Dragon Fury</h3>
+      <img src="image_1(78).jpg" alt="AF"/><a href="https://www.mediafire.com/file/n6v7iluiyir792z/Bruce_Lee_Dragon_Fury_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Blocks Update</h3>
+      <img src="image_1(79).jpg" alt="AF"/><a href="https://www.mediafire.com/file/zwbsq6fyej462ly/Blocks+Update+(addon)byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Bundle & Backpack</h3>
+      <img src="image_1(80).jpg" alt="AF"/><a href="https://www.mediafire.com/file/2kpyouqcecpoji6/Bundle_Backpack_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>City Apocalypse</h3>
+      <img src="image_1(81).jpg" alt="AF"/><a href="https://www.mediafire.com/file/d9n5ki6bxedzs0c/City_Apocalypse_%2528world_template%2529byhadzz%25282%2529.mctemplate/file" class="download-btn" target="_blank">Download World</a>
+    </div>
+    <div class="card">
+      <h3>Days Survived</h3>
+      <img src="image_1(82).jpg" alt="AF"/><a href="https://www.mediafire.com/file/qfqvislg5182na2/Days_Survived_Counter_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Fashion Teens</h3>
+      <img src="image_1(83).jpg" alt="AF"/><a href="https://www.mediafire.com/file/itubtobxbqov04b/Fashion_Teens_%2528skin_pack%2529_by_hadzz.mcpack/file" class="download-btn" target="_blank">Download Skins</a>
+    </div>
+    <div class="card">
+      <h3>Fire & Void</h3>
+      <img src="image_1(84).jpg" alt="AF"/><a href="https://www.mediafire.com/file/sudj1jrddb32v1w/Fire_Void_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>French Pastries</h3>
+      <img src="image_1(85).jpg" alt="AF"/><a href="https://www.mediafire.com/file/e26w702qzsl2niv/French_Pastries_%2528world_template%2529byhadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a>
+    </div>
+    <div class="card">
+      <h3>Mob Weapons</h3>
+      <img src="image_1(86).jpg" alt="AF"/><a href="https://www.mediafire.com/file/osfrrhv3fmjg6o6/Mob_Weapons_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Claims Adjuster</h3>
+      <img src="image_1(90).jpg" alt="AF"/><a href="https://www.mediafire.com/file/en0krnu52yr4jwm/Claims_Adjuster_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Electrical Creatifity</h3>
+      <img src="image_1(91).jpg" alt="AF"/><a href="https://www.mediafire.com/file/scetn4mllpgth3u/Electrical_Creativity_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>LycanForge</h3>
+      <img src="image_1(92).jpg" alt="AF"/><a href="https://www.mediafire.com/file/jugk70zxziz02k8/LycanForge_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Neko Kitty</h3>
+      <img src="image_1(93).jpg" alt="AF"/><a href="https://www.mediafire.com/file/kv2jrdjhdj7u7bp/Neko_Kitty_%2528skin_pack%2529byhadzz.mcpack/file" class="download-btn" target="_blank">Download Skins</a>
+    </div>
+    <div class="card">
+      <h3>Nightmares</h3>
+      <img src="image_1(94).jpg" alt="AF"/><a href="https://www.mediafire.com/file/p5h8a9oojin17ms/Nightmares_%2528skin_pack%2529byhadzz.mcpack/file" class="download-btn" target="_blank">Download Skins</a>
+    </div>
+    <div class="card">
+      <h3>Parkour Maker</h3>
+      <img src="image_1(95).jpg" alt="AF"/><a href="https://www.mediafire.com/file/laiz3kjf01hooxw/Parkour_Maker_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Props & Stuff</h3>
+      <img src="image_1(96).jpg" alt="AF"/><a href="https://www.mediafire.com/file/5o5bz7e5ari5sbh/Props_and_Stuff_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Shadow Teens</h3>
+      <img src="image_1(97).jpg" alt="AF"/><a href="https://www.mediafire.com/file/qno0e24rtdeyjk0/Shadow_Teens_%2528skin_pack%2529byhadzz.mcpack/file" class="download-btn" target="_blank">Download Skins</a>
+    </div>
+    <div class="card">
+      <h3>Soulfire Zombies</h3>
+      <img src="image_1(98).jpg" alt="AF"/><a href="https://www.mediafire.com/file/0lvsg6xwmmhbupy/Soulfire_Zombies_%2528skin_pack%2529byhadzz.mcpack/file" class="download-btn" target="_blank">Download Skins</a>
+    </div>
+    <div class="card">
+      <h3>Teleporters</h3>
+      <img src="image_1(99).jpg" alt="AF"/><a href="https://www.mediafire.com/file/oupcufjxwkhx55l/Teleporters_Add_On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Toycat's Toolkit</h3>
+      <img src="image_1(100).jpg" alt="AF"/><a href="https://www.mediafire.com/file/yamv0ods53zyj3o/Toycat%2527s_Toolkit_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Tralalero Tralala</h3>
+      <img src="image_1(101).jpg" alt="AF"/><a href="https://www.mediafire.com/file/hlax3gargu7mr6u/Tralalero_Tralala_%2528skin_pack%2529byhadzz.mcpack/file" class="download-btn" target="_blank">Download Skins</a>
+    </div>
+    <div class="card">
+      <h3>Uncrafters+</h3>
+      <img src="image_1(102).jpg" alt="AF"/><a href="https://www.mediafire.com/file/8qihzjsmbxyneit/Uncrafter%252B_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Utility Bots</h3>
+      <img src="image_1(103).jpg" alt="AF"/><a href="https://www.mediafire.com/file/82d1w32gz25oytl/Utility_Bots_Add-On_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>White Furniture</h3>
+      <img src="image_1(104).jpg" alt="AF"/><a href="https://www.mediafire.com/file/oa8mbuq82xj419y/White_Furniture_%2528world_template%2529byhadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a>
+    </div>
+    <div class="card">
+      <h3>Albino Animals</h3>
+      <img src="image_1(53).jpg" alt="AF"/><a href="https://www.mediafire.com/file/6q8991z2ixbbdm7/Albino+Animals+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Animals</h3>
+      <img src="image_1(54).jpg" alt="AF"/><a href="https://www.mediafire.com/file/p4bdr4o8xlss0ui/Animals+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Be A Mob</h3>
+      <img src="image_1(55).jpg" alt="AF"/><a href="https://www.mediafire.com/file/8ez3qiw9rra2tqx/BE+a+MOB+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Biomes + Structures</h3>
+      <img src="image_1(56).jpg" alt="AF"/><a href="https://www.mediafire.com/file/qt6ofzj8uzfi9tw/BIOMES+++STRUCTURES+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Blockify</h3>
+      <img src="image_1(57).jpg" alt="AF"/><a href="https://www.mediafire.com/file/lap3s1dvywo8b6u/Blockify+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Craftable Dungeons</h3>
+      <img src="image_1(58).jpg" alt="AF"/><a href="https://www.mediafire.com/file/5xg927cbfjj0cs9/Craftable+Dungeons+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Effect Statues</h3>
+      <img src="image_1(59).jpg" alt="AF"/><a href="https://www.mediafire.com/file/cwasqcecgo2xtpz/Effect+Statues+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Enchantments Expansion</h3>
+      <img src="image_1(60).jpg" alt="AF"/><a href="https://www.mediafire.com/file/s5glgmn1j4gxu04/Enchantment+Expansion+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Furniture+</h3>
+      <img src="image_1(61).jpg" alt="AF"/><a href="https://www.mediafire.com/file/v2jquu0v7re4qwd/Furniture+++Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Gauntlets</h3>
+      <img src="image_1(62).jpg" alt="AF"/><a href="https://www.mediafire.com/file/ggl6s6y8bjvtepb/Gauntlets+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Hamsters</h3>
+      <img src="image_1(63).jpg" alt="AF"/><a href="https://www.mediafire.com/file/j731cgc09o7yuam/Hamsters++Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Lights And Lamps</h3>
+      <img src="image_1(64).jpg" alt="AF"/><a href="https://www.mediafire.com/file/qm61o8afozvldmd/Lights+and+Lamps+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>More Custom Blocks 2</h3>
+      <img src="image_1(65).jpg" alt="AF"/><a href="https://www.mediafire.com/file/9lofsp3oq8hqbmz/More+Custom+Blocks+2+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Paragliders</h3>
+      <img src="image_1(66).jpg" alt="AF"/><a href="https://www.mediafire.com/file/fmxtl1m5021qlnj/Paragliders+Add-On+(addon)byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Pet Weapons</h3>
+      <img src="image_1(67).jpg" alt="AF"/><a href="https://www.mediafire.com/file/xhold86u6i19pxn/Pet_Weapons_%2528addon%2529byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Quest Craft</h3>
+      <img src="image_1(68).jpg" alt="AF"/><a href="https://www.mediafire.com/file/73mc7ybi871tq2r/Quest+Craft+(addon)byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>RPG Classes</h3>
+      <img src="image_1(69).jpg" alt="AF"/><a href="https://www.mediafire.com/file/7vltxmatm70e0pi/RPG+CLASSES!+ADD-ON+(addon)byhadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Battle Royale S1</h3>
+      <img src="image_1(51).jpg" alt="AF"/><a href="https://www.mediafire.com/file/wohqj2wvy74j86v/Battle_Royale_S1_%2528world_template%2529_by_hadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a><br><a href="https://www.mediafire.com/file/urrpoqrbv7a1a9m/Battle_Royale_S1_%2528skin_pack%2529_by_hadzz.mcpack/file" class="download-btn" target="_blank">Download Skin</a>
+    </div>
+    <div class="card">
+      <h3>Construction Pack</h3>
+      <img src="image_1(52).jpg" alt="AF"/><a href="https://www.mediafire.com/file/9v43tylkaoqqtmj/Construction_Pack_%2528world_template%2529_by_hadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a><br><a href="https://www.mediafire.com/file/rou2sdc34yppkqf/Construction_Pack_%2528skin_pack%2529_by_hadzz.mcpack/file" class="download-btn" target="_blank">Download Skin</a>
+    </div>
+    <div class="card">
+      <h3>Airplanes</h3>
+      <img src="image_1(50).jpg" alt="AF"/><a href="https://www.mediafire.com/file/8i0pui9kz3kr9zq/Airplanes_Add-On_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Assassin</h3>
+      <img src="image_1(44).jpg" alt="AF"/><a href="https://www.mediafire.com/file/1l7ey1btux14afp/ASSASSIN+(skin_pack)+by+hadzz.mcpack/file" class="download-btn" target="_blank">Download Skin</a>
+    </div>
+    <div class="card">
+      <h3>Dinosaurs & Weapons</h3>
+      <img src="image_1(45).jpg" alt="AF"/><a href="https://www.mediafire.com/file/3bgwb02dvq9xn40/Dinosaurs+Weapons+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Hacker</h3>
+      <img src="image_1(46).jpg" alt="AF"/><a href="https://www.mediafire.com/file/o7s3qp9o42bvspy/Hacker+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Horses+</h3>
+      <img src="image_1(47).jpg" alt="AF"/><a href="https://www.mediafire.com/file/htlmkn52axcubyt/Horses++(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>The Backrooms Darkness</h3>
+      <img src="image_1(48).jpg" alt="AF"/><a href="https://www.mediafire.com/file/dnp5ani9h74sfvk/The+Backrooms+Darkness+(world_template)+by+hadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a><br><a href="https://www.mediafire.com/file/xcolrwmas8ungtt/The+Backrooms+Darkness+(skin_pack)+by+hadzz.mcpack/file" class="download-btn" target="_blank">Download Skin</a>
+    </div>
+    <div class="card">
+      <h3>Animals</h3>
+      <img src="image_1(49).jpg" alt="AF"/><a href="https://www.mediafire.com/file/t0atdgcaosjeads/Animals+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Chomp</h3>
+      <img src="image_1(35).jpg" alt="AF"/><a href="https://www.mediafire.com/file/666qpvimenddde1/Chomp+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Crafty Mon</h3>
+      <img src="image_1(36).jpg" alt="AF"/><a href="https://www.mediafire.com/file/r1afjn39beb7zcz/CRAFTYMON+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Display Stuff</h3>
+      <img src="image_1(37).jpg" alt="AF"/><a href="https://www.mediafire.com/file/wzt1flycjhz9gxi/Display+Stuff+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Ghost</h3>
+      <img src="image_1(38).jpg" alt="AF"/><a href="https://www.mediafire.com/file/c2yjgl6283xry6h/Ghosts+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Mini Mob Buddies</h3>
+      <img src="image_1(39).jpg" alt="AF"/><a href="https://www.mediafire.com/file/mphp47s1efnqbo5/Mini+Mob+Buddies+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Mythic Mobs</h3>
+      <img src="image_1(40).jpg" alt="AF"/><a href="https://www.mediafire.com/file/4p7yml8uwao2a9p/Mythic+Mobs+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Structure</h3>
+      <img src="image_1(41).jpg" alt="AF"/><a href="https://www.mediafire.com/file/zewec1khag2no3f/Structures+Add-On+(addon)+by+Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Vehicles</h3>
+      <img src="image_1(42).jpg" alt="AF"/><a href="https://www.mediafire.com/file/n82x6sfeti426ch/Vehicles+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Villager Dweller</h3>
+      <img src="image_1(43).jpg" alt="AF"/><a href="https://www.mediafire.com/file/jkyitzptaw0swex/VILLAGER+DWELLER+Add-On+(addon)+by+hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Mob Action Figure</h3>
+      <img src="image_1(11).jpg" alt="Mob Action Figure"/><a href="https://sfl.gl/0Lem1v" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Adidas Adventure</h3>
+      <img src="image_1(7).jpg" alt="Adidas Adventure"/><a href="https://www.mediafire.com/file/qodyudgmlutxm64/adidas_Adventurers_Add-On_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+      </div>
+    <div class="card">
+      <h3>Backpacks++</h3>
+      <img src="image_1(2).jpg" alt="Backpacks++"/><a href="https://sfl.gl/hymIIq" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Action & Stuff 1.1</h3>
+      <img src="image_1(1).jpg" alt="Action & Stuff 1.1" alt="Action Stuff"/><a href="https://sfile.mobi/94Vuc7iUV24" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Action & Stuff 1.2</h3>
+      <img src="image_1(1).jpg" alt="Action & Stuff 1.2" alt="Action Stuff"/><a href="https://sfile.mobi/80rrRjABYk0" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Action & Stuff 1.3</h3>
+      <img src="image_1(1).jpg" alt="Action & Stuff 1.3" alt="Action Stuff"/><a href="https://sfile.mobi/4ydpWHaRa0b" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Action & Stuff 1.4</h3>
+      <img src="image_1(1).jpg" alt="Action & Stuff 1.4" alt="Action Stuff"/><a href="https://sfile.mobi/aZ7tuz7A1qf" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Action & Stuff 1.5</h3>
+      <img src="image_1(1).jpg" alt="Action & Stuff 1.5" alt="Action Stuff"/><a href="https://sfile.mobi/2wDcY9QVgEM" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+   <div class="card">
+      <h3>Damege Effects</h3>
+      <img src="image_1(12).jpg" alt="Damage Effects"/><a href="https://sfl.gl/OdqNGxJu" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Monster Truck</h3>
+      <img src="image_1(3).jpg" alt="Monster Truck"/><a href="https://sfl.gl/OdqNGxJu" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Aquaculture</h3>
+      <img src="image_1(13).jpg" alt="Aquaculture"/><a href="https://sfl.gl/APIhc" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Action Heroes</h3>
+      <img src="image_1.jpg" alt="Action Heroes"/><a href="https://sfile.mobi/4jsr7lyxPiJ" class="download-btn" target="_blank">Download Skin</a>
+    </div>
+    <div class="card">
+      <h3>Doors</h3>
+      <img src="image_1(10).jpg" alt="Doors"/><a href="https://www.mediafire.com/file/ibt7hg1b2gvc2y6/Doors_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Portal Chests</h3>
+      <img src="image_1(4).jpg" alt="Portal Chests"/><a href="https://www.mediafire.com/file/quare26vgzbjqhu/Portal_Chests_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Horror Weapons</h3>
+      <img src="image_1(6).jpg" alt="Horror Weapons"/><a href="https://sfl.gl/LmLUfA" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Food Expansion</h3>
+      <img src="image_1(9).jpg" alt="Food Expansion"/><a href="https://www.mediafire.com/file/a9vt1nmrktm788b/Food_Expansion_From_Hadzz.zip/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Wings</h3>
+      <img src="image_1(5).jpg" alt="Wings"/><a href="https://sfl.gl/MBUC" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Sky Island</h3>
+      <img src="image_1(8).jpg" alt="Sky island"/><a href="https://www.mediafire.com/file/uepw05fbw1ttris/Sky_Islands_Add-On_By_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Map</a>
+    </div>
+    <div class="card">
+      <h3>Astronaut and Aliens</h3>
+      <img src="image_1(16).jpg" alt="AAS"/><a href="https://www.mediafire.com/file/9op3zcgk8q528qq/Astronauts_and_Aliens_%2528HD%2529_%2528skin_pack%2529_by_Hadzz.mcpack/file" class="download-btn" target="_blank">Download Skin</a>
+    </div>
+    <div class="card">
+      <h3>Weapons Expansions</h3>
+      <img src="image_1(17).jpg" alt="WE"/><a href="https://www.mediafire.com/file/rilkryg4m88c0rk/Weapons_Expansion_%2528world_template%2529_by_Hadzz.mctemplate/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Minecraft Smurf</h3>
+      <img src="image_1(14).jpg" alt="MU"/><a href="https://www.mediafire.com/file/lnpk8h5sm5hvikx/Smurfs+(world_template)+by+Hadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a><br>
+      <a href="https://sfile.mobi/37AtwSG5mUD" class="download-btn" target="_blank">Download Skin</a>
+    </div>
+    <div class="card">
+      <h3>Hardcore Wilderness Survival</h3>
+      <img src="image_1(15).jpg" alt="HWS"/><a href="https://www.mediafire.com/file/ko2tkq3tsumtf2r/Hardcore+Wilderness+Survival+(world_template)+by+Hadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a>
+    </div>
+    <div class="card">
+      <h3>Auto Factory</h3>
+      <img src="image_1(18).jpg" alt="AF"/><a href="https://www.mediafire.com/file/00lndzqw5fasdea/Auto_Factory_RP_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Armor Evolve</h3>
+      <img src="image_1(19).jpg" alt="AF"/><a href="https://www.mediafire.com/file/7amvshiqln77jzw/Armor_Evolve_Add-On_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Difficulty Brutal</h3>
+      <img src="image_1(20).jpg" alt="AF"/><a href="https://www.mediafire.com/file/k9kh2a0zhr9eqbh/Difficulty_Brutal_From_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Dragon PVP</h3>
+      <img src="image_1(21).jpg" alt="AF"/><a href="https://www.mediafire.com/file/vl7qvhdb58w0kig/%25C2%25A76Dragon_PvP_%2528resources%2529_by_Hadzz.mcpack/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Everest Ascension</h3>
+      <img src="image_1(22).jpg" alt="AF"/><a href="https://www.mediafire.com/file/aa67weebmeloz0c/Everest_Ascension_%2528skin_pack%2529_by_Hadzz.mcpack/file" class="download-btn" target="_blank">Download Skin</a><br><a href="https://www.mediafire.com/file/r40srxeuiwbmqjd/Everest_Ascension_%2528world_template%2529_by_Hadzz.mctemplate/file" class="download-btn" target="_blank">Download World</a>
+    </div>
+    <div class="card">
+      <h3>Furniture++</h3>
+      <img src="image_1(23).jpg" alt="AF"/><a href="https://www.mediafire.com/file/3iupm675odv4mf4/FURNITURE%252B%252B_Add-On_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Magic</h3>
+      <img src="image_1(24).jpg" alt="AF"/><a href="https://www.mediafire.com/file/55yshveqpy7gqjn/Magic_Add-On_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Ambatukam Creeper</h3>
+      <img src="image_1(25).jpg" alt="AF"/><a href="https://www.mediafire.com/file/h713knenjm2485i/ambatukam_creeper_by_Hadzz.mcpack.zip/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Villager Bicara</h3>
+      <img src="image_1(26).jpg" alt="AF"/><a href="https://www.mediafire.com/file/wqehywakwjtk7x2/Villager_Bicara.zip/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+        <div class="card">
+      <h3>Trains</h3>
+      <img src="image_1(27).jpg" alt="AF"/><a href="https://www.mediafire.com/file/l0213u6f9yrtrz9/Trains_Add-On_%2528addon%2529_By_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Sit On Everything</h3>
+      <img src="image_1(28).jpg" alt="AF"/><a href="https://www.mediafire.com/file/6noutvpfu6laabk/Sit_On_Everything_Add-on_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Epic Kill Animations</h3>
+      <img src="image_1(29).jpg" alt="AF"/><a href="https://www.mediafire.com/file/v7vp9y5a5sxehsp/Epic+Kill+Animations+(addon)+by+Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>100+ Structures</h3>
+      <img src="image_1(30).jpg" alt="AF"/><a href="https://www.mediafire.com/file/xu4vl1jbkje4398/100++Structures+Add-On+(addon)+by+Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>McDonald's</h3>
+      <img src="image_1(31).jpg" alt="AF"/><a href="https://www.mediafire.com/file/ktd9580vzj6sbj3/McDonald%2527s-Add-on_%2528addon%2529_by_Hadzz.mcaddon/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+    <div class="card">
+      <h3>Mine Emote</h3>
+      <img src="image_1(32).jpg" alt="AF"/><a href="https://www.mediafire.com/file/xgr34lh7hqc1x4y/Mine_Emote_Beta_%2528Fat%2529.mcaddon/file" class="download-btn" target="_blank">Download Beta Fat</a><br><a href="https://www.mediafire.com/file/o43j0supsni79d5/Mine_Emote_Beta_v_0.5.5_Slim.mcaddon/file" class="download-btn" target="_blank">Download Beta Slim</a>
+    </div>
+    <div class="card">
+      <h3>Scara Hat Red & Blue</h3>
+      <img src="image_1(33).jpg" alt="AF"/><a href="https://www.mediafire.com/file/mf9qs873t0n8wa5/Scara_Red_%2526_Blue.zip/file" class="download-btn" target="_blank">Download Add-On</a>
+    </div>
+  </div>
+   `;
+} else {
+  document.getElementById("pw-invalid").innerText = `Password Salah!!`;
+}
+}
+  </script>
+  <br>
+  <br>
+  <br>
+<script src="addon.js"></script>
+</body>
+</html>
